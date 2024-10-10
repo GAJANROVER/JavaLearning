@@ -18,7 +18,7 @@ public class EmployeeController {
 
     @GetMapping("/get")
     public ResponseEntity<Employee> find(@RequestParam Long id){
-        log.info("employee create stared...");
+        log.info("fetching employee...");
         try{
             Employee result = employeeService.find(id);
             if (result != null){
